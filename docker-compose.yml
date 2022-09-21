@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: investment-tracker
+    command: python src/execute_tracker.py
+    volumes:
+      - .:/app
+    env_file:
+      - .envrc
